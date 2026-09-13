@@ -1,30 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>ร้านค้าออนไลน์ - Simple Shop</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <div id="menu-container"></div>
-        <div class="row">
-        <div class="col-sm-3 p-3">
-            <img src="cat/cat_1.jpg " class="" >
-            <h3>dsjabgji</h3>
+
+    <!-- 1. Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">🛒 SimpleShop</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">หน้าแรก</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">สินค้าทั้งหมด</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ติดต่อเรา</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-light ms-lg-3" href="#">ตะกร้าสินค้า (0)</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-         <div class="col-sm-3 p-3">
-            <img src="cat/cat_1.jpg " class="" >
-            <h3>dsjabgji</h3>
+    </nav>
+
+    <!-- 2. Hero Section -->
+    <header class="bg-primary text-white text-center py-5 mb-5">
+        <div class="container">
+            <h1 class="display-4 fw-bold">ยินดีต้อนรับสู่ SimpleShop</h1>
+            <p class="lead">แหล่งรวมสินค้าราคาพิเศษ คัดสรรมาเพื่อคุณโดยเฉพาะ</p>
+            <a href="#products" class="btn btn-light btn-lg mt-3">เลือกซื้อสินค้า</a>
         </div>
-        <div class="col-sm-3 p-3">
-            <img src="cat/cat_1.jpg" >
-            <h3>dsjabgji</h3>
-        </div>
+    </header>
+
+    <!-- 3. Product Grid -->
+    <div class="container mb-5" id="products">
+        <h2 class="text-center mb-4">สินค้าแนะนำ</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            
+            <!-- สินค้าชิ้นที่ 1 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="สินค้า 1">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">สินค้าตัวอย่างที่ 1</h5>
+                        <p class="card-text text-muted">รายละเอียดสั้นๆ ของสินค้าชิ้นนี้ อธิบายคุณสมบัติเด่น</p>
+                        <div class="mt-auto">
+                            <p class="fs-5 fw-bold text-danger mb-2">590 บาท</p>
+                            <button class="btn btn-primary w-100">เพิ่มลงตะกร้า</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- สินค้าชิ้นที่ 2 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="สินค้า 2">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">สินค้าตัวอย่างที่ 2</h5>
+                        <p class="card-text text-muted">รายละเอียดสั้นๆ ของสินค้าชิ้นนี้ อธิบายคุณสมบัติเด่น</p>
+                        <div class="mt-auto">
+                            <p class="fs-5 fw-bold text-danger mb-2">1,290 บาท</p>
+                            <button class="btn btn-primary w-100">เพิ่มลงตะกร้า</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- สินค้าชิ้นที่ 3 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="สินค้า 3">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">สินค้าตัวอย่างที่ 3</h5>
+                        <p class="card-text text-muted">รายละเอียดสั้นๆ ของสินค้าชิ้นนี้ อธิบายคุณสมบัติเด่น</p>
+                        <div class="mt-auto">
+                            <p class="fs-5 fw-bold text-danger mb-2">850 บาท</p>
+                            <button class="btn btn-primary w-100">เพิ่มลงตะกร้า</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- สินค้าชิ้นที่ 4 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="สินค้า 4">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">สินค้าตัวอย่างที่ 4</h5>
+                        <p class="card-text text-muted">รายละเอียดสั้นๆ ของสินค้าชิ้นนี้ อธิบายคุณสมบัติเด่น</p>
+                        <div class="mt-auto">
+                            <p class="fs-5 fw-bold text-danger mb-2">350 บาท</p>
+                            <button class="btn btn-primary w-100">เพิ่มลงตะกร้า</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- สินค้าชิ้นที่ 5 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="สินค้า 5">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">สินค้าตัวอย่างที่ 5</h5>
+                        <p class="card-text text-muted">รายละเอียดสั้นๆ ของสินค้าชิ้นนี้ อธิบายคุณสมบัติเด่น</p>
+                        <div class="mt-auto">
+                            <p class="fs-5 fw-bold text-danger mb-2">990 บาท</p>
+                            <button class="btn btn-primary w-100">เพิ่มลงตะกร้า</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- สินค้าชิ้นที่ 6 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="สินค้า 6">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">สินค้าตัวอย่างที่ 6</h5>
+                        <p class="card-text text-muted">รายละเอียดสั้นๆ ของสินค้าชิ้นนี้ อธิบายคุณสมบัติเด่น</p>
+                        <div class="mt-auto">
+                            <p class="fs-5 fw-bold text-danger mb-2">1,590 บาท</p>
+                            <button class="btn btn-primary w-100">เพิ่มลงตะกร้า</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
+
+    <!-- 4. Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 SimpleShop. สงวนลิขสิทธิ์ทั้งหมด.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-<script src="js/menu.js"></script>
-<script src="js/bootstrap.min.js"></script>

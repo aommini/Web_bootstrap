@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reginter</title>
+    <!-- นำเข้า Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light py-5">
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                
+                <!-- การ์ดครอบแบบฟอร์ม -->
+                <div class="card shadow-sm border-0 rounded-4">
+                    <div class="card-body p-4 p-md-5">
+                        
+                        <!-- หัวข้อฟอร์ม -->
+                        <div class="border-bottom pb-3 mb-4">
+                            <h2 class="fw-bold fs-4 text-primary">แบบฟอร์มกรอกข้อมูลส่วนตัว</h2>
+                            <p class="text-muted small mb-0">กรุณากรอกข้อมูลให้ครบถ้วนและถูกต้องตามความเป็นจริง</p>
+                        </div>
+
+                        <!-- ฟอร์มกรอกข้อมูล -->
+                        <form>
+                            
+                            <!-- แถวที่ 1: ชื่อ และ นามสกุล -->
+                            <div class="row mb-3">
+                                <div class="col-md-6 mb-3 mb-md-0">
+                                    <label for="firstName" class="form-label">ชื่อจริง <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="firstName" placeholder="ระบุชื่อจริง" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="lastName" class="form-label">นามสกุล <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="lastName" placeholder="ระบุนามสกุล" required>
+                                </div>
+                            </div>
+
+                            <!-- แถวที่ 2: อีเมล และ เบอร์โทรศัพท์ -->
+                            <div class="row mb-3">
+                                <div class="col-md-6 mb-3 mb-md-0">
+                                    <label for="email" class="form-label">อีเมล <span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="phone" class="form-label">เบอร์โทรศัพท์ <span class="text-danger">*</span></label>
+                                    <input type="tel" class="form-control" id="phone" placeholder="0812345678" required>
+                                </div>
+                            </div>
+
+                            <!-- แถวที่ 3: เพศ และ จังหวัด (Select Option) -->
+                            <div class="row mb-3">
+                                <div class="col-md-6 mb-3 mb-md-0">
+                                    <label for="gender" class="form-label">เพศ</label>
+                                    <select class="form-select" id="gender">
+                                        <option selected disabled>-- เลือกเพศ --</option>
+                                        <option value="male">ชาย</option>
+                                        <option value="female">หญิง</option>
+                                        <option value="other">อื่นๆ</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="province" class="form-label">จังหวัด</label>
+                                    <select class="form-select" id="province">
+                                        <option selected disabled>-- เลือกจังหวัด --</option>
+                                        <option value="bangkok">กรุงเทพมหานคร</option>
+                                        <option value="chonburi">ชลบุรี</option>
+                                        <option value="chiangmai">เชียงใหม่</option>
+                                        <option value="other">จังหวัดอื่นๆ</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- แถวที่ 4: ที่อยู่ (Textarea) -->
+                            <div class="mb-3">
+                                <label for="address" class="form-label">ที่อยู่ปัจจุบัน</label>
+                                <textarea class="form-control" id="address" rows="3" placeholder="บ้านเลขที่, ถนน, ตำบล, อำเภอ"></textarea>
+                            </div>
+
+                            <!-- แถวที่ 5: อัปโหลดไฟล์ (File input) -->
+                            <!-- <div class="mb-3">
+                                <label for="formFile" class="form-label">แนบเอกสาร / รูปถ่าย</label>
+                                <input class="form-control" type="file" id="formFile">
+                            </div>
+
+                            <!- แถวที่ 6: ยอมรับเงื่อนไข (Checkbox) -->
+                            <!-- <div class="mb-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="terms" required>
+                                    <label class="form-check-label small" for="terms">
+                                        ข้าพเจ้ายืนยันว่าข้อมูลดังกล่าวข้างต้นเป็นความจริงทุกประการ <span class="text-danger">*</span>
+                                    </label>
+                                </div>
+                            </div> -->
+                            <!-- ปุ่มควบคุมฟอร์ม (บันทึก / ยกเลิก) -->
+                            <div class="d-flex justify-content-end gap-2">
+                                <button type="reset" class="btn btn-light px-4">ล้างข้อมูล</button>
+                                <button type="submit" class="btn btn-primary px-4 fw-semibold">บันทึกข้อมูล</button>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- นำเข้า Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
